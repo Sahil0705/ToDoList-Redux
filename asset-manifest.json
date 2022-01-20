@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ToDoList-Redux/static/css/main.ce479a9e.css",
-    "main.js": "/ToDoList-Redux/static/js/main.c4e9019c.js",
+    "main.css": "/ToDoList-Redux/static/css/main.b57ee1f2.css",
+    "main.js": "/ToDoList-Redux/static/js/main.5f5a9a61.js",
     "static/media/todo.png": "/ToDoList-Redux/static/media/todo.04d9cfea0ec478e515d9.png",
     "static/media/todolight.png": "/ToDoList-Redux/static/media/todolight.f270d905bbeaa4c5dab7.png",
     "index.html": "/ToDoList-Redux/index.html",
-    "main.ce479a9e.css.map": "/ToDoList-Redux/static/css/main.ce479a9e.css.map",
-    "main.c4e9019c.js.map": "/ToDoList-Redux/static/js/main.c4e9019c.js.map"
+    "main.b57ee1f2.css.map": "/ToDoList-Redux/static/css/main.b57ee1f2.css.map",
+    "main.5f5a9a61.js.map": "/ToDoList-Redux/static/js/main.5f5a9a61.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce479a9e.css",
-    "static/js/main.c4e9019c.js"
+    "static/css/main.b57ee1f2.css",
+    "static/js/main.5f5a9a61.js"
   ]
 }
