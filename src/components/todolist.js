@@ -105,7 +105,7 @@ const Todo = () => {
             }></i>
             )}
           </div>
-          {/* show our items  */}
+          
           <div className="showItems">
             {list.map((curElem) => {
               return (
@@ -134,7 +134,7 @@ const Todo = () => {
             })}
           </div>
 
-          {/* remove all button  */}
+  
           <div>
             <button
               className="btn effect04"
