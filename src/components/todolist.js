@@ -25,49 +25,6 @@ const Todo = () => {
   const dispatch  = useDispatch();
   let list  = useSelector((state)=> state.functionality.list);
   const toggle  = useSelector((state)=> state.functionality.toggle);
-  // console.log(getLocalData());
-  // list = getLocalData();
-  // console.log(list);
-  
-  // const [items, setItems] = useState(getLocalData());
-  // const [isEditItem, setIsEditItem] = useState("");
-  // const [toggleButton, setToggleButton] = useState(false);
-
-  // // add the items fucnction
-  // const addItem = () => 
-  // {
-
-  //   if (!inputdata) 
-  //   {
-  //     alert("plz fill the data");
-  //   } 
-  //   else if (inputdata && toggleButton) 
-  //   {
-  //     document.getElementById("cap").innerHTML = 'Add Your List...✌';
-  //     setItems(
-  //       items.map((curElem) => {
-  //         if (curElem.id === isEditItem) 
-  //         {
-  //             curElem.name = inputdata
-  //         }
-  //         return curElem;
-  //       })
-  //     );
-  //     setInputData("");
-  //     setIsEditItem("");
-  //     setToggleButton(false);
-  //   } 
-  //   else if (inputdata && !toggleButton) 
-  //   {
-  //     const myNewInputData = 
-  //     {
-  //       id: new Date().getTime().toString(),
-  //       name: inputdata,
-  //     };
-  //     setItems([...items, myNewInputData]);
-  //     setInputData("");
-  //   }
-  // };
 
   function changeTheme()
   {
@@ -100,40 +57,10 @@ const Todo = () => {
     }
   }
 
-  // //edit the items
-  // const editItem = (index) => {
-  //   const item_todo_edited = items.find((curElem) => {
-  //     return curElem.id === index;
-  //   });
-  //   document.getElementById("IdOfInput").focus();
-  //   document.getElementById("cap").innerHTML = 'Update Your List...✌';
-  //   setInputData(item_todo_edited.name);
-  //   setIsEditItem(index);
-  //   setToggleButton(true);
-  // };
-
-  // // how to delete items section
-  // const deleteItem = (index) => {
-  //   const updatedItems = items.filter((curElem) => {
-  //     return curElem.id !== index;
-  //   });
-  //   setItems(updatedItems);
-  // };
-
-  // // remove all the elements
-  // const removeAll = () => {
-  //   setItems([]);
-  // };
-
-  // adding localStorage
   useEffect(() => {
     document.getElementById("IdOfInput").focus();
     localStorage.setItem("todolist_redux", JSON.stringify(list));
   }, [list]);
-  // useEffect(()=>
-  // { 
-  //   console.log(toggle);
-  // },[toggle])
 
   return (
     <>
@@ -164,6 +91,7 @@ const Todo = () => {
             {toggle ? (
               <i className="far fa-edit add-btn" onClick={()=> 
               {
+                  document.getElementById("cap").innerHTML = 'Add Your List...✌';
                   dispatch(addItems(inputdata,"Edit"));
                   setInputData("");
               }
@@ -188,6 +116,7 @@ const Todo = () => {
                       className="far fa-edit add-btn"
                       onClick={()=> 
                         {
+                          document.getElementById("cap").innerHTML = 'Update Your List...✌';
                           document.getElementById("IdOfInput").focus();
                           dispatch(updateItems(curElem.id,curElem.data));
                           setInputData(curElem.data);
@@ -211,8 +140,9 @@ const Todo = () => {
               className="btn effect04"
               data-sm-link-text="Remove All"
               style={{fontFamily:'Convergence'}}
+              onClick={()=> dispatch(removeAllItems())}
               >
-              <span style={{fontFamily:'Convergence'}} onClick={()=> dispatch(removeAllItems())}> CHECK LIST</span>
+              <span style={{fontFamily:'Convergence'}}> CHECK LIST</span>
             </button>
           </div>
         </div>
