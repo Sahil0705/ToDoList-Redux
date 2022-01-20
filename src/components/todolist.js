@@ -89,7 +89,7 @@ const Todo = () => {
             />
             
             {toggle ? (
-              <i className="far fa-edit add-btn" onClick={()=> 
+              <i className="far fa-edit add-btn" title='Edit Item' onClick={()=> 
               {
                   document.getElementById("cap").innerHTML = 'Add Your List...✌';
                   dispatch(addItems(inputdata,"Edit"));
@@ -97,7 +97,7 @@ const Todo = () => {
               }
             }></i>
             ) : (
-              <i className="fa fa-plus add-btn" onClick={()=> 
+              <i className="fa fa-plus add-btn" title='Add Item' onClick={()=> 
               {
                   dispatch(addItems(inputdata,"Add"));
                   setInputData("");

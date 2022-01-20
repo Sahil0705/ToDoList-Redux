@@ -109,7 +109,7 @@ input:focus {
 .showItems {
   margin-top: 3rem;
   text-align: center;
-  height: 46vh;
+  height: 44vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
