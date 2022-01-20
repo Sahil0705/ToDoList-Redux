@@ -1,6 +1,9 @@
+let v = JSON.parse(localStorage.getItem("todolist_redux"));
+if(!v)
+    v = []
+
 const initalList = {
-    list : JSON.parse(localStorage.getItem("todolist_redux")),
-    // list:[],
+    list : v,
     toggle: false,
     update:{
         u_id:"",
