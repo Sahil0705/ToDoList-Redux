@@ -1,6 +1,6 @@
 const initalList = {
-    // list : JSON.parse(localStorage.getItem("todolist_redux")),
-    list:[],
+    list : JSON.parse(localStorage.getItem("todolist_redux")),
+    // list:[],
     toggle: false,
     update:{
         u_id:"",
