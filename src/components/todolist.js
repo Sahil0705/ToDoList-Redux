@@ -67,7 +67,6 @@ const Todo = () => {
       <div className="main-div">
         <div className="child-div">
         <button id='themebtn' onClick={changeTheme}><i className="far fa-sun" title='Light Theme..?' id="faw"></i></button>
-        {/* <button id='themebtn'><i className="far fa-sun" title='Light Theme..?' id="faw"></i></button> */}
           <figure style={{display:"inline"}}>
           <img src={todo} alt='todo' id='i'/>
           <div className="theme" style={{display:"inline", height:"300", width:"300"}}>
