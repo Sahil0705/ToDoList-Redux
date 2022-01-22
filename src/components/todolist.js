@@ -134,17 +134,17 @@ const Todo = () => {
             })}
           </div>
 
-  
-          <div>
-            <button
-              className="btn effect04"
-              data-sm-link-text="Remove All"
-              style={{fontFamily:'Convergence'}}
-              onClick={()=> dispatch(removeAllItems())}
-              >
-              <span style={{fontFamily:'Convergence'}}> CHECK LIST</span>
-            </button>
-          </div>
+            {list.length!=0 ? 
+              <div>
+                    <button
+                      className="btn_remove"
+                      onClick={()=> dispatch(removeAllItems())}
+                      >
+                      <span style={{fontFamily:'Convergence'}}>Remove All</span>
+                    </button>
+                  </div>
+            : null}
+          
         </div>
       </div>
     </>

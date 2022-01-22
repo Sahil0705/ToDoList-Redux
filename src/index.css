@@ -289,3 +289,21 @@ input:focus {
 {
   font-weight: bold;
 }
+.btn_remove
+{
+  color:black;
+  background-color: lightyellow;
+  width:130px;
+  height:45px;
+  border-radius: 15px;
+  font-family:'Convergence';
+  font-size: 17px;
+  border-color: black;
+}
+.btn_remove:hover
+{
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(85, 41, 220);
+  color: white;
+}
